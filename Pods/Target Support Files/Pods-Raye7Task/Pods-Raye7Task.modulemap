@@ -1,0 +1,6 @@
+framework module Pods_Raye7Task {
+  umbrella header "Pods-Raye7Task-umbrella.h"
+
+  export *
+  module * { export * }
+}

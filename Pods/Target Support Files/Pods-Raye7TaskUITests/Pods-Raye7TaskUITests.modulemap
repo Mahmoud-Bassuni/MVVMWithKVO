@@ -1,0 +1,6 @@
+framework module Pods_Raye7TaskUITests {
+  umbrella header "Pods-Raye7TaskUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,11 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		194F4957229CA076007E41CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F4956229CA076007E41CE /* AppDelegate.swift */; };
-		194F4959229CA076007E41CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F4958229CA076007E41CE /* ViewController.swift */; };
 		194F495C229CA076007E41CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194F495A229CA076007E41CE /* Main.storyboard */; };
 		194F495E229CA078007E41CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194F495D229CA078007E41CE /* Assets.xcassets */; };
 		194F4961229CA078007E41CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194F495F229CA078007E41CE /* LaunchScreen.storyboard */; };
 		194F496C229CA078007E41CE /* Raye7TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F496B229CA078007E41CE /* Raye7TaskUITests.swift */; };
+		19DCC144229CB98400883B4C /* ReposCodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC143229CB98400883B4C /* ReposCodableModel.swift */; };
+		19DCC147229CC03900883B4C /* RepositoryEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC146229CC03900883B4C /* RepositoryEnum.swift */; };
+		19DCC149229CC04D00883B4C /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC148229CC04D00883B4C /* NetworkAdapter.swift */; };
+		19DCC14C229CC40200883B4C /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC14B229CC40200883B4C /* constants.swift */; };
+		19DCC150229CCC4900883B4C /* RepositoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC14F229CCC4900883B4C /* RepositoryVC.swift */; };
+		19DCC153229CD2A800883B4C /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC152229CD2A800883B4C /* BaseProtocol.swift */; };
+		19DCC155229CD8CD00883B4C /* RepositoriesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC154229CD8CD00883B4C /* RepositoriesVM.swift */; };
+		19DCC157229CD94C00883B4C /* RepositoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC156229CD94C00883B4C /* RepositoryTVC.swift */; };
+		19DCC15A229CDF1000883B4C /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC159229CDF1000883B4C /* Extension+UIView.swift */; };
+		19DCC15D229CDFFE00883B4C /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC15C229CDFFE00883B4C /* CustomImageView.swift */; };
+		19DCC15F229CE1CB00883B4C /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC15E229CE1CB00883B4C /* Extension+UIViewController.swift */; };
+		5692E2663C2FE2579BD506A5 /* Pods_Raye7Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1359C0B0589FA830CD4F4646 /* Pods_Raye7Task.framework */; };
+		7EC5FCFE47005023DC039208 /* Pods_Raye7TaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E633282E11E680E6A63B71F /* Pods_Raye7TaskUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12E78F05E8C86072889D910A /* Pods-Raye7Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Raye7Task.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Raye7Task/Pods-Raye7Task.debug.xcconfig"; sourceTree = "<group>"; };
+		1359C0B0589FA830CD4F4646 /* Pods_Raye7Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Raye7Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		194F4953229CA076007E41CE /* Raye7Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raye7Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		194F4956229CA076007E41CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		194F4958229CA076007E41CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		194F495B229CA076007E41CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		194F495D229CA078007E41CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		194F4960229CA078007E41CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +49,21 @@
 		194F4967229CA078007E41CE /* Raye7TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Raye7TaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		194F496B229CA078007E41CE /* Raye7TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raye7TaskUITests.swift; sourceTree = "<group>"; };
 		194F496D229CA078007E41CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19DCC143229CB98400883B4C /* ReposCodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposCodableModel.swift; sourceTree = "<group>"; };
+		19DCC146229CC03900883B4C /* RepositoryEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryEnum.swift; sourceTree = "<group>"; };
+		19DCC148229CC04D00883B4C /* NetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
+		19DCC14B229CC40200883B4C /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		19DCC14F229CCC4900883B4C /* RepositoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryVC.swift; sourceTree = "<group>"; };
+		19DCC152229CD2A800883B4C /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
+		19DCC154229CD8CD00883B4C /* RepositoriesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesVM.swift; sourceTree = "<group>"; };
+		19DCC156229CD94C00883B4C /* RepositoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTVC.swift; sourceTree = "<group>"; };
+		19DCC159229CDF1000883B4C /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		19DCC15C229CDFFE00883B4C /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		19DCC15E229CE1CB00883B4C /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		5E633282E11E680E6A63B71F /* Pods_Raye7TaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Raye7TaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CBE2C70B66C241B7B35BE3E /* Pods-Raye7Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Raye7Task.release.xcconfig"; path = "Pods/Target Support Files/Pods-Raye7Task/Pods-Raye7Task.release.xcconfig"; sourceTree = "<group>"; };
+		CC063DB4149B71DF3E577204 /* Pods-Raye7TaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Raye7TaskUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Raye7TaskUITests/Pods-Raye7TaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEF6BB61F76B1471677BAA01 /* Pods-Raye7TaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Raye7TaskUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Raye7TaskUITests/Pods-Raye7TaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5692E2663C2FE2579BD506A5 /* Pods_Raye7Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC5FCFE47005023DC039208 /* Pods_Raye7TaskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +92,8 @@
 				194F4955229CA076007E41CE /* Raye7Task */,
 				194F496A229CA078007E41CE /* Raye7TaskUITests */,
 				194F4954229CA076007E41CE /* Products */,
+				82555986E81EA34705B18601 /* Pods */,
+				1A9C8E2262F7C5E510DF1752 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,11 +109,13 @@
 		194F4955229CA076007E41CE /* Raye7Task */ = {
 			isa = PBXGroup;
 			children = (
-				194F4956229CA076007E41CE /* AppDelegate.swift */,
-				194F4958229CA076007E41CE /* ViewController.swift */,
-				194F495A229CA076007E41CE /* Main.storyboard */,
-				194F495D229CA078007E41CE /* Assets.xcassets */,
-				194F495F229CA078007E41CE /* LaunchScreen.storyboard */,
+				19DCC14A229CC3EC00883B4C /* Utilities */,
+				19DCC145229CBFB100883B4C /* Service */,
+				194F497D229CA8A5007E41CE /* Assets */,
+				194F497C229CA872007E41CE /* Application */,
+				194F4978229CA838007E41CE /* View */,
+				194F4977229CA814007E41CE /* View Model */,
+				194F4976229CA80F007E41CE /* Model */,
 				194F4962229CA078007E41CE /* Info.plist */,
 			);
 			path = Raye7Task;
@@ -96,6 +130,138 @@
 			path = Raye7TaskUITests;
 			sourceTree = "<group>";
 		};
+		194F4976229CA80F007E41CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19DCC143229CB98400883B4C /* ReposCodableModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		194F4977229CA814007E41CE /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				19DCC154229CD8CD00883B4C /* RepositoriesVM.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		194F4978229CA838007E41CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				194F497B229CA85F007E41CE /* View Controller */,
+				194F497A229CA84C007E41CE /* Storyboard */,
+				194F4979229CA83E007E41CE /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		194F4979229CA83E007E41CE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				19DCC156229CD94C00883B4C /* RepositoryTVC.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		194F497A229CA84C007E41CE /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				194F495F229CA078007E41CE /* LaunchScreen.storyboard */,
+				194F495A229CA076007E41CE /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		194F497B229CA85F007E41CE /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19DCC14F229CCC4900883B4C /* RepositoryVC.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		194F497C229CA872007E41CE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				194F4956229CA076007E41CE /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		194F497D229CA8A5007E41CE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				194F495D229CA078007E41CE /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		19DCC145229CBFB100883B4C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				19DCC146229CC03900883B4C /* RepositoryEnum.swift */,
+				19DCC148229CC04D00883B4C /* NetworkAdapter.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		19DCC14A229CC3EC00883B4C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				19DCC15B229CDFE800883B4C /* CustomeControls */,
+				19DCC158229CDEE700883B4C /* Extension */,
+				19DCC151229CD28200883B4C /* Protocols */,
+				19DCC14B229CC40200883B4C /* constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		19DCC151229CD28200883B4C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				19DCC152229CD2A800883B4C /* BaseProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		19DCC158229CDEE700883B4C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				19DCC159229CDF1000883B4C /* Extension+UIView.swift */,
+				19DCC15E229CE1CB00883B4C /* Extension+UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		19DCC15B229CDFE800883B4C /* CustomeControls */ = {
+			isa = PBXGroup;
+			children = (
+				19DCC15C229CDFFE00883B4C /* CustomImageView.swift */,
+			);
+			path = CustomeControls;
+			sourceTree = "<group>";
+		};
+		1A9C8E2262F7C5E510DF1752 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1359C0B0589FA830CD4F4646 /* Pods_Raye7Task.framework */,
+				5E633282E11E680E6A63B71F /* Pods_Raye7TaskUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82555986E81EA34705B18601 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12E78F05E8C86072889D910A /* Pods-Raye7Task.debug.xcconfig */,
+				8CBE2C70B66C241B7B35BE3E /* Pods-Raye7Task.release.xcconfig */,
+				CC063DB4149B71DF3E577204 /* Pods-Raye7TaskUITests.debug.xcconfig */,
+				CEF6BB61F76B1471677BAA01 /* Pods-Raye7TaskUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 194F4970229CA078007E41CE /* Build configuration list for PBXNativeTarget "Raye7Task" */;
 			buildPhases = (
+				666AB9C84C5C1172A8699304 /* [CP] Check Pods Manifest.lock */,
 				194F494F229CA076007E41CE /* Sources */,
 				194F4950229CA076007E41CE /* Frameworks */,
 				194F4951229CA076007E41CE /* Resources */,
+				66B4B836BA0DE803732FC3AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +288,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 194F4973229CA078007E41CE /* Build configuration list for PBXNativeTarget "Raye7TaskUITests" */;
 			buildPhases = (
+				58451FFB0663886A519779A5 /* [CP] Check Pods Manifest.lock */,
 				194F4963229CA078007E41CE /* Sources */,
 				194F4964229CA078007E41CE /* Frameworks */,
 				194F4965229CA078007E41CE /* Resources */,
@@ -192,13 +361,98 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		58451FFB0663886A519779A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Raye7TaskUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		666AB9C84C5C1172A8699304 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Raye7Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66B4B836BA0DE803732FC3AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Raye7Task/Pods-Raye7Task-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Raye7Task/Pods-Raye7Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		194F494F229CA076007E41CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				194F4959229CA076007E41CE /* ViewController.swift in Sources */,
+				19DCC150229CCC4900883B4C /* RepositoryVC.swift in Sources */,
+				19DCC147229CC03900883B4C /* RepositoryEnum.swift in Sources */,
+				19DCC149229CC04D00883B4C /* NetworkAdapter.swift in Sources */,
+				19DCC144229CB98400883B4C /* ReposCodableModel.swift in Sources */,
 				194F4957229CA076007E41CE /* AppDelegate.swift in Sources */,
+				19DCC15A229CDF1000883B4C /* Extension+UIView.swift in Sources */,
+				19DCC14C229CC40200883B4C /* constants.swift in Sources */,
+				19DCC15D229CDFFE00883B4C /* CustomImageView.swift in Sources */,
+				19DCC15F229CE1CB00883B4C /* Extension+UIViewController.swift in Sources */,
+				19DCC153229CD2A800883B4C /* BaseProtocol.swift in Sources */,
+				19DCC155229CD8CD00883B4C /* RepositoriesVM.swift in Sources */,
+				19DCC157229CD94C00883B4C /* RepositoryTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,11 +612,13 @@
 		};
 		194F4971229CA078007E41CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12E78F05E8C86072889D910A /* Pods-Raye7Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L3SSZK62LX;
 				INFOPLIST_FILE = Raye7Task/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,11 +632,13 @@
 		};
 		194F4972229CA078007E41CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CBE2C70B66C241B7B35BE3E /* Pods-Raye7Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L3SSZK62LX;
 				INFOPLIST_FILE = Raye7Task/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +652,7 @@
 		};
 		194F4974229CA078007E41CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC063DB4149B71DF3E577204 /* Pods-Raye7TaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -414,6 +673,7 @@
 		};
 		194F4975229CA078007E41CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEF6BB61F76B1471677BAA01 /* Pods-Raye7TaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
