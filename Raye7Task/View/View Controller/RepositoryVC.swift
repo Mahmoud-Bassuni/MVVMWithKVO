@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 class RepositoryVC: UIViewController {
-
+    // IBOutlet and objects
     @IBOutlet weak var repositoryTableView: UITableView!
     var repositoryViewModel : RepositoriesVM!
     override func viewDidLoad() {
@@ -21,12 +21,11 @@ class RepositoryVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-         repositoryViewModel = RepositoriesVM(_page: 1)
+        repositoryViewModel = RepositoriesVM()
         repositoryViewModel.delegate = self
     }
 }
-
+//  confirm tableview protocol
 extension RepositoryVC : UITableViewDelegate , UITableViewDataSource
 {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,28 +40,41 @@ extension RepositoryVC : UITableViewDelegate , UITableViewDataSource
         cell.configCell(item: repositoryItem)
         return cell;
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let url = self.repositoryViewModel.RepositoryAtIndex(indexPath.row).htmlURL
+       navigateURL(url: url, viewController: self)
+    }
 
 }
-
+//-----
+//  confirm vm delegate
 extension RepositoryVC : RepositoryVMDelegate
 {
     func dataBind() {
         SVProgressHUD.dismiss()
         self.repositoryTableView.reloadData()
     }
-
     func showLoading() {
         SVProgressHUD.show(withStatus: "")
     }
-
     func hideLoading() {
         SVProgressHUD.dismiss()
     }
-
     func showAlert(messgae: String) {
         SVProgressHUD.dismiss()
         alert(title: "validation",message: messgae)
     }
-
-
 }
+//
+// pager area
+extension RepositoryVC : UIScrollViewDelegate{
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        // chack if scrolling arrive at the end of table
+        if (((self.repositoryTableView?.contentOffset.y)! + (self.repositoryTableView?.frame.size.height)!) >= (self.repositoryTableView?.contentSize.height)!){
+            guard self.repositoryViewModel.isDataReturned == true else { return}
+            repositoryViewModel.pageNumber += 1 ;
+            self.repositoryViewModel.getRepositories()
+        }
+    }
+}
+

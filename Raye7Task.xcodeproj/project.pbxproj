@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190A20D8229E01030040DC6D /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A20D7229E01030040DC6D /* GlobalFunc.swift */; };
+		190A20DA229E13970040DC6D /* MoyaCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A20D9229E13970040DC6D /* MoyaCacheable.swift */; };
 		194F4957229CA076007E41CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F4956229CA076007E41CE /* AppDelegate.swift */; };
 		194F495C229CA076007E41CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194F495A229CA076007E41CE /* Main.storyboard */; };
 		194F495E229CA078007E41CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194F495D229CA078007E41CE /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		12E78F05E8C86072889D910A /* Pods-Raye7Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Raye7Task.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Raye7Task/Pods-Raye7Task.debug.xcconfig"; sourceTree = "<group>"; };
 		1359C0B0589FA830CD4F4646 /* Pods_Raye7Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Raye7Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		190A20D7229E01030040DC6D /* GlobalFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunc.swift; sourceTree = "<group>"; };
+		190A20D9229E13970040DC6D /* MoyaCacheable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaCacheable.swift; sourceTree = "<group>"; };
 		194F4953229CA076007E41CE /* Raye7Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raye7Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		194F4956229CA076007E41CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		194F495B229CA076007E41CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 				19DCC158229CDEE700883B4C /* Extension */,
 				19DCC151229CD28200883B4C /* Protocols */,
 				19DCC14B229CC40200883B4C /* constants.swift */,
+				190A20D7229E01030040DC6D /* GlobalFunc.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				19DCC152229CD2A800883B4C /* BaseProtocol.swift */,
+				190A20D9229E13970040DC6D /* MoyaCacheable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -441,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				190A20DA229E13970040DC6D /* MoyaCacheable.swift in Sources */,
 				19DCC150229CCC4900883B4C /* RepositoryVC.swift in Sources */,
 				19DCC147229CC03900883B4C /* RepositoryEnum.swift in Sources */,
 				19DCC149229CC04D00883B4C /* NetworkAdapter.swift in Sources */,
@@ -453,6 +460,7 @@
 				19DCC153229CD2A800883B4C /* BaseProtocol.swift in Sources */,
 				19DCC155229CD8CD00883B4C /* RepositoriesVM.swift in Sources */,
 				19DCC157229CD94C00883B4C /* RepositoryTVC.swift in Sources */,
+				190A20D8229E01030040DC6D /* GlobalFunc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

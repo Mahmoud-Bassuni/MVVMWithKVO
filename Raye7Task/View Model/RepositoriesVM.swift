@@ -16,20 +16,29 @@ class RepositoriesVM
 {
     var delegate : RepositoryVMDelegate?
     var Repositories : RepositoriesCodableModel = []
-    init(_page : Int) {
-        getRepositories(page: _page)
+    var isDataReturned : Bool = true
+    var pageNumber : Int = 0
+    init() {
+        getRepositories()
     }
-    func getRepositories(page : Int)
+    func getRepositories()
     {
         DispatchQueue.main.async {
-        self.delegate?.showLoading()
+            self.delegate?.showLoading()
         }
-        NetworkAdapter.request(target: .getAllRepositories(page: page), success: { [unowned self] Response in
+        NetworkAdapter.request(target: .getAllRepositories(page: pageNumber), success: { [unowned self] Response in
             do
             {
                 let decoder = JSONDecoder()
                 let getData = try decoder.decode(RepositoriesCodableModel.self,from: Response.data)
                 DispatchQueue.global(qos: .background).async {
+                    guard getData.count > 0 else {
+                        self.isDataReturned = false
+                        DispatchQueue.main.async {
+                            self.delegate?.hideLoading()
+                        }
+                        return
+                    }
                     for item in getData
                     {
                         self.Repositories.append(item)
