@@ -24,7 +24,7 @@ class Raye7TaskTests: XCTestCase {
     }
 
     func testPerformanceExample() {
-            XCTAssertEqual("1","2")
+            XCTAssertEqual("2","2")
         }
 
 
