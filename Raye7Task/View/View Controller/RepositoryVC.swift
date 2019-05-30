@@ -21,8 +21,11 @@ class RepositoryVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        repositoryViewModel = RepositoriesVM()
+        repositoryViewModel = RepositoriesVM(_serviceAdapter: NetworkAdapter())
         repositoryViewModel.delegate = self
+    }
+    deinit {
+        repositoryViewModel = nil
     }
 }
 //  confirm tableview protocol

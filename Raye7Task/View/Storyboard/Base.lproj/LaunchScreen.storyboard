@@ -19,10 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raye7 Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dom-Gk-r3f">
-                                <rect key="frame" x="20" y="391" width="374" height="115"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="4Ni-7a-T2a"/>
-                                </constraints>
+                                <rect key="frame" x="98" y="430" width="218" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -30,9 +27,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Dom-Gk-r3f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="347" id="Qq2-21-BNZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dom-Gk-r3f" secondAttribute="trailing" constant="20" id="f7X-Be-TEz"/>
-                            <constraint firstItem="Dom-Gk-r3f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ffU-Ot-1hl"/>
+                            <constraint firstItem="Dom-Gk-r3f" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Zi3-63-PyM"/>
+                            <constraint firstItem="Dom-Gk-r3f" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="npF-YE-c4H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

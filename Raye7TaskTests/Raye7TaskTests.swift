@@ -7,20 +7,26 @@
 //
 
 import XCTest
-
+@testable import Raye7Task
 class Raye7TaskTests: XCTestCase {
-
+    var service :  NetworkAdapter!
+    var viewModel : RepositoriesVM!
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        service = NetworkAdapter()
+        viewModel = RepositoriesVM(_serviceAdapter: service)
     }
-
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        viewModel = nil
+        service = nil
     }
-    func testPerformanceExample() {
-        // test 
-            XCTAssertEqual("3","2")
-        }
-
-
+    func testGetAllRepositories() {
+        service.request(target: .getAllRepositories(page: 1), success: { Response in
+            do
+            {
+                let decoder = JSONDecoder()
+                let getData = try! decoder.decode(RepositoriesCodableModel.self,from: Response.data)
+                XCTAssertNotNil(getData)
+            }
+            }, error: { error in }, failure: { error in })
+}
 }

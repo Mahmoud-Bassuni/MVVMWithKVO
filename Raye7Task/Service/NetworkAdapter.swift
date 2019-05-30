@@ -10,8 +10,8 @@ import Foundation
 import Moya
 struct NetworkAdapter {
     // MoyaCacheablePlugin for cache data for n time and when expire it will fetch from server
-    static let provider = MoyaProvider<RepositoryEnum>(plugins: [MoyaCacheablePlugin()])
-    static func request(target: RepositoryEnum, success successCallback: @escaping (Response) -> Void, error errorCallback: @escaping (Swift.Error) -> Void, failure failureCallback: @escaping (MoyaError) -> Void) {
+     let provider = MoyaProvider<RepositoryEnum>(plugins: [MoyaCacheablePlugin()])
+     func request(target: RepositoryEnum, success successCallback: @escaping (Response) -> Void, error errorCallback: @escaping (Swift.Error) -> Void, failure failureCallback: @escaping (MoyaError) -> Void) {
 
         provider.request(target) { (result) in
             switch result {

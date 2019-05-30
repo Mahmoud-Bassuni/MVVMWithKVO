@@ -18,7 +18,9 @@ class RepositoriesVM
     var Repositories : RepositoriesCodableModel = []
     var isDataReturned : Bool = true
     var pageNumber : Int = 0
-    init() {
+    var serviceAdapter : NetworkAdapter!
+    init(_serviceAdapter : NetworkAdapter) {
+        self.serviceAdapter = _serviceAdapter
         getRepositories()
     }
     func getRepositories()
@@ -26,7 +28,7 @@ class RepositoriesVM
         DispatchQueue.main.async {
             self.delegate?.showLoading()
         }
-        NetworkAdapter.request(target: .getAllRepositories(page: pageNumber), success: { [unowned self] Response in
+        serviceAdapter.request(target: .getAllRepositories(page: pageNumber), success: { [unowned self] Response in
             do
             {
                 let decoder = JSONDecoder()
@@ -57,6 +59,7 @@ class RepositoriesVM
     }
     deinit {
         Repositories = []
+        serviceAdapter = nil
     }
 }
 extension RepositoriesVM {
