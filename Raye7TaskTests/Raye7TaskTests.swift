@@ -18,8 +18,7 @@ class Raye7TaskTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     func testPerformanceExample() {
-           // test
-            XCTAssertEqual("2","2")
+            XCTAssertEqual("3","2")
         }
 
 
