@@ -16,7 +16,6 @@ struct NetworkAdapter {
         provider.request(target) { (result) in
             switch result {
             case .success(let response):
-
                 if response.statusCode >= 200 && response.statusCode <= 300 {
                     successCallback(response)
                 } else {
