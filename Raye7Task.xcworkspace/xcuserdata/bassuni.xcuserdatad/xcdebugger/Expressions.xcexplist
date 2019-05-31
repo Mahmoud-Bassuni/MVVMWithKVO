@@ -3,10 +3,35 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "RepositoriesVMTest.test_fetch_data_from_ViewModel_to_bind_it_in_tableview():RepositoriesVMTest.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "repositoriesVM.Repositories">
+            </PersistentString>
+            <PersistentString
+               value = "repositoriesVM">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "RepositoryVM.language.getter:RepositoriesVM.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.repository.language">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RepositoriesVM.getRepositories():RepositoriesVM.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.delegate">
+            </PersistentString>
+            <PersistentString
+               value = "self.delegate!">
+            </PersistentString>
+            <PersistentString
+               value = "self.delegate?.showLoading()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

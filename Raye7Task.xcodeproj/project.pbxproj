@@ -14,7 +14,10 @@
 		194F495E229CA078007E41CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194F495D229CA078007E41CE /* Assets.xcassets */; };
 		194F4961229CA078007E41CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194F495F229CA078007E41CE /* LaunchScreen.storyboard */; };
 		194F496C229CA078007E41CE /* Raye7TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F496B229CA078007E41CE /* Raye7TaskUITests.swift */; };
-		19D634C4229F62BD004598B2 /* Raye7TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D634C3229F62BD004598B2 /* Raye7TaskTests.swift */; };
+		19AE13C322A15CC00016F543 /* RepoModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE13C222A15CC00016F543 /* RepoModelTest.swift */; };
+		19AE13C422A168A90016F543 /* ReposCodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC143229CB98400883B4C /* ReposCodableModel.swift */; };
+		19AE13C822A16CCF0016F543 /* RepositoriesVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE13C722A16CCF0016F543 /* RepositoriesVMTest.swift */; };
+		19D634C4229F62BD004598B2 /* RepositoriesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D634C3229F62BD004598B2 /* RepositoriesServiceTests.swift */; };
 		19DCC144229CB98400883B4C /* ReposCodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC143229CB98400883B4C /* ReposCodableModel.swift */; };
 		19DCC147229CC03900883B4C /* RepositoryEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC146229CC03900883B4C /* RepositoryEnum.swift */; };
 		19DCC149229CC04D00883B4C /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC148229CC04D00883B4C /* NetworkAdapter.swift */; };
@@ -61,8 +64,10 @@
 		194F4967229CA078007E41CE /* Raye7TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Raye7TaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		194F496B229CA078007E41CE /* Raye7TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raye7TaskUITests.swift; sourceTree = "<group>"; };
 		194F496D229CA078007E41CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19AE13C222A15CC00016F543 /* RepoModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModelTest.swift; sourceTree = "<group>"; };
+		19AE13C722A16CCF0016F543 /* RepositoriesVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesVMTest.swift; sourceTree = "<group>"; };
 		19D634C1229F62BC004598B2 /* Raye7TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Raye7TaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		19D634C3229F62BD004598B2 /* Raye7TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raye7TaskTests.swift; sourceTree = "<group>"; };
+		19D634C3229F62BD004598B2 /* RepositoriesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesServiceTests.swift; sourceTree = "<group>"; };
 		19D634C5229F62BD004598B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19DCC143229CB98400883B4C /* ReposCodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposCodableModel.swift; sourceTree = "<group>"; };
 		19DCC146229CC03900883B4C /* RepositoryEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryEnum.swift; sourceTree = "<group>"; };
@@ -221,10 +226,36 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		19AE13C122A15C480016F543 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19AE13C222A15CC00016F543 /* RepoModelTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19AE13C522A16A860016F543 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				19D634C3229F62BD004598B2 /* RepositoriesServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		19AE13C622A16C130016F543 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				19AE13C722A16CCF0016F543 /* RepositoriesVMTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		19D634C2229F62BD004598B2 /* Raye7TaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				19D634C3229F62BD004598B2 /* Raye7TaskTests.swift */,
+				19AE13C622A16C130016F543 /* ViewModel */,
+				19AE13C522A16A860016F543 /* Services */,
+				19AE13C122A15C480016F543 /* Model */,
 				19D634C5229F62BD004598B2 /* Info.plist */,
 			);
 			path = Raye7TaskTests;
@@ -535,7 +566,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19D634C4229F62BD004598B2 /* Raye7TaskTests.swift in Sources */,
+				19D634C4229F62BD004598B2 /* RepositoriesServiceTests.swift in Sources */,
+				19AE13C422A168A90016F543 /* ReposCodableModel.swift in Sources */,
+				19AE13C822A16CCF0016F543 /* RepositoriesVMTest.swift in Sources */,
+				19AE13C322A15CC00016F543 /* RepoModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
