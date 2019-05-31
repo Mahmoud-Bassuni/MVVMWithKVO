@@ -69,7 +69,6 @@ extension RepositoriesVM {
     func numberOfRowsInSection(_ section: Int) -> Int {
         return self.Repositories.count
     }
-
     func RepositoryAtIndex(_ index: Int) -> RepositoryVM {
         let repository = Repositories[index]
         return RepositoryVM(repository)

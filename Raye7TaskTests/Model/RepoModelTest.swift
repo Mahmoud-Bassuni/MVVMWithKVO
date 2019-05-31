@@ -27,7 +27,6 @@ private extension RepositoryElement {
             let description = json["description"] as? String,
               let language = json["language"] as? String,
               let createdAt = json["createdAt"] as? String,
-
             let forks_count = json["forks_count"] as? Int else {
                 return nil
         }
@@ -38,7 +37,6 @@ private extension RepositoryElement {
         self.language = language
         self.createdAt = createdAt
         self.owner = Owner(avatarURL: "www.imag.png")
-
     }
 }
 typealias JSON = Dictionary<String, Any>

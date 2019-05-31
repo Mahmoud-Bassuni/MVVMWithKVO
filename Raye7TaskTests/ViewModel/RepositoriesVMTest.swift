@@ -9,27 +9,21 @@
 import XCTest
 @testable import Raye7Task
 class RepositoriesVMTest: XCTestCase {
-
-     var repositoriesVM :  RepositoriesVM!
-     var service :  NetworkAdapter!
+    var repositoriesVM :  RepositoriesVM!
+    var service :  NetworkAdapter!
     override func setUp() {
         service = NetworkAdapter()
     }
-
     override func tearDown() {
         repositoriesVM = nil
         service = nil
     }
-
     func test_fetch_data_from_ViewModel_to_bind_it_in_tableview()
     {
-
         repositoriesVM = RepositoriesVM(_serviceAdapter: service)
         repositoriesVM.delegate = self
-
     }
 }
-
 extension RepositoriesVMTest : RepositoryVMDelegate
 {
     // call back after fetch data
@@ -39,18 +33,13 @@ extension RepositoriesVMTest : RepositoryVMDelegate
             return
         }
     }
-
     func showLoading() {
-
     }
 
     func hideLoading() {
-
     }
 
     func showAlert(messgae: String) {
         print(messgae)
     }
-
-
 }

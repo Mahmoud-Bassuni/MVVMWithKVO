@@ -13,7 +13,6 @@ enum RepositoryEnum
 {
     case getAllRepositories(page: Int)
 }
-
 extension RepositoryEnum : TargetType{
     var baseURL: URL {
         return URL(string: baseUrl)!
@@ -41,13 +40,12 @@ extension RepositoryEnum : TargetType{
         return ["Content-Type" : "application/json"]
     }
 }
-
+// confirm cache
 extension RepositoryEnum: MoyaCacheable {
     var cachePolicy: MoyaCacheablePolicy {
     return .returnCacheDataElseLoad
     }
 }
-
 final class MoyaCacheablePlugin: PluginType {
     func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
         if let moyaCachableProtocol = target as? MoyaCacheable {

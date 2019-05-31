@@ -9,8 +9,6 @@
 import UIKit
 
 class RepositoryTVC: UITableViewCell {
-
-
     @IBOutlet var viewCardProp: UIView!
     @IBOutlet var userImageProp: CustomImageView!
     @IBOutlet var descriptionTxt: UILabel!

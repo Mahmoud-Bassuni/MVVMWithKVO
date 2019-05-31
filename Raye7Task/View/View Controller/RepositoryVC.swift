@@ -17,7 +17,6 @@ class RepositoryVC: UIViewController {
         repositoryTableView.delegate = self
         repositoryTableView.dataSource = self
         repositoryTableView.tableFooterView = UIView()
-
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
