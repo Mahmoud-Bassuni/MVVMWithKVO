@@ -17,7 +17,7 @@ class RepositoriesVM
     var delegate : RepositoryVMDelegate?
     var Repositories : RepositoriesCodableModel = []
     var isDataReturned : Bool = true
-    var pageNumber : Int = 0
+    var pageNumber : Int = 1
     var serviceAdapter : NetworkAdapter!
     init(_serviceAdapter : NetworkAdapter) {
         self.serviceAdapter = _serviceAdapter
