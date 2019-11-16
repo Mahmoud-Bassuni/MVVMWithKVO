@@ -14,6 +14,9 @@
 		194F495E229CA078007E41CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194F495D229CA078007E41CE /* Assets.xcassets */; };
 		194F4961229CA078007E41CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194F495F229CA078007E41CE /* LaunchScreen.storyboard */; };
 		194F496C229CA078007E41CE /* Raye7TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F496B229CA078007E41CE /* Raye7TaskUITests.swift */; };
+		19A8FEA5238034AA00FE181A /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A8FEA4238034AA00FE181A /* DynamicValue.swift */; };
+		19A8FEA72380396700FE181A /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A8FEA62380396700FE181A /* GenericDataSource.swift */; };
+		19A8FEAA23803A4F00FE181A /* RepositoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A8FEA923803A4F00FE181A /* RepositoryDataSource.swift */; };
 		19AE13C322A15CC00016F543 /* RepoModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE13C222A15CC00016F543 /* RepoModelTest.swift */; };
 		19AE13C422A168A90016F543 /* ReposCodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC143229CB98400883B4C /* ReposCodableModel.swift */; };
 		19AE13C822A16CCF0016F543 /* RepositoriesVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE13C722A16CCF0016F543 /* RepositoriesVMTest.swift */; };
@@ -64,6 +67,9 @@
 		194F4967229CA078007E41CE /* Raye7TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Raye7TaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		194F496B229CA078007E41CE /* Raye7TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raye7TaskUITests.swift; sourceTree = "<group>"; };
 		194F496D229CA078007E41CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19A8FEA4238034AA00FE181A /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		19A8FEA62380396700FE181A /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		19A8FEA923803A4F00FE181A /* RepositoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDataSource.swift; sourceTree = "<group>"; };
 		19AE13C222A15CC00016F543 /* RepoModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModelTest.swift; sourceTree = "<group>"; };
 		19AE13C722A16CCF0016F543 /* RepositoriesVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesVMTest.swift; sourceTree = "<group>"; };
 		19D634C1229F62BC004598B2 /* Raye7TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Raye7TaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				19DCC143229CB98400883B4C /* ReposCodableModel.swift */,
+				19A8FEA4238034AA00FE181A /* DynamicValue.swift */,
+				19A8FEA62380396700FE181A /* GenericDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,7 +178,7 @@
 		194F4977229CA814007E41CE /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				19DCC154229CD8CD00883B4C /* RepositoriesVM.swift */,
+				19A8FEA8238039DA00FE181A /* Repositories */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -224,6 +232,15 @@
 				194F495D229CA078007E41CE /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		19A8FEA8238039DA00FE181A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				19DCC154229CD8CD00883B4C /* RepositoriesVM.swift */,
+				19A8FEA923803A4F00FE181A /* RepositoryDataSource.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		19AE13C122A15C480016F543 /* Model */ = {
@@ -544,8 +561,11 @@
 				19DCC144229CB98400883B4C /* ReposCodableModel.swift in Sources */,
 				194F4957229CA076007E41CE /* AppDelegate.swift in Sources */,
 				19DCC15A229CDF1000883B4C /* Extension+UIView.swift in Sources */,
+				19A8FEA5238034AA00FE181A /* DynamicValue.swift in Sources */,
 				19DCC14C229CC40200883B4C /* constants.swift in Sources */,
 				19DCC15D229CDFFE00883B4C /* CustomImageView.swift in Sources */,
+				19A8FEAA23803A4F00FE181A /* RepositoryDataSource.swift in Sources */,
+				19A8FEA72380396700FE181A /* GenericDataSource.swift in Sources */,
 				19DCC15F229CE1CB00883B4C /* Extension+UIViewController.swift in Sources */,
 				19DCC153229CD2A800883B4C /* BaseProtocol.swift in Sources */,
 				19DCC155229CD8CD00883B4C /* RepositoriesVM.swift in Sources */,

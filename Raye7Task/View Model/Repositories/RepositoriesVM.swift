@@ -1,32 +1,24 @@
-//
-//  RepositoryVM.swift
-//  Raye7Task
-//
-//  Created by Bassuni on 5/28/19.
-//  Copyright © 2019 Bassuni. All rights reserved.
-//
 
 import Foundation
-protocol RepositoryVMDelegate : BaseProtocol
-{
-    func dataBind()
-}
-
 class RepositoriesVM
 {
-    var delegate : RepositoryVMDelegate?
-    var Repositories : RepositoriesCodableModel = []
+
+    weak var dataSource : GenericDataSource<RepositoryElement>?
+    var serviceAdapter : NetworkAdapter!
+     var onErrorHandling : ((ErrorResult?) -> Void)?
+     var loading : (() -> Void)!
+     var stopLoading : (() -> Void)!
     var isDataReturned : Bool = true
     var pageNumber : Int = 1
-    var serviceAdapter : NetworkAdapter!
-    init(_serviceAdapter : NetworkAdapter) {
-        self.serviceAdapter = _serviceAdapter
-        getRepositories()
-    }
+
+    init(_serviceAdapter : NetworkAdapter, dataSource : GenericDataSource<RepositoryElement>?) {
+           self.serviceAdapter = _serviceAdapter
+           self.dataSource = dataSource
+      }
     func getRepositories()
     {
         DispatchQueue.main.async {
-            self.delegate?.showLoading()
+           self.loading()
         }
         serviceAdapter.request(target: .getAllRepositories(page: pageNumber), success: { [unowned self] Response in
             do
@@ -37,43 +29,27 @@ class RepositoriesVM
                     guard getData.count > 0 else {
                         self.isDataReturned = false
                         DispatchQueue.main.async {
-                            self.delegate?.hideLoading()
+                            self.stopLoading()
                         }
                         return
                     }
-                    for item in getData
-                    {
-                        self.Repositories.append(item)
-                    }
+                    self.dataSource?.data.value = getData
                     DispatchQueue.main.async {
-                        self.delegate?.dataBind()
+                        self.stopLoading()
                     }
                 }
             }
             catch let err { print("Err", err)}
             }, error: { Error in
-                self.delegate?.showAlert(messgae: Error.localizedDescription)
+                self.onErrorHandling?(ErrorResult.custom(string: Error.localizedDescription))
         }) { MoyaError in
-            self.delegate?.showAlert(messgae: MoyaError.localizedDescription)
+            self.onErrorHandling?(ErrorResult.custom(string: MoyaError.localizedDescription))
         }
     }
     deinit {
-        Repositories = []
+        dataSource = nil
         serviceAdapter = nil
     }
-}
-extension RepositoriesVM {
-    var numberOfSections: Int {
-        return 1
-    }
-    func numberOfRowsInSection(_ section: Int) -> Int {
-        return self.Repositories.count
-    }
-    func RepositoryAtIndex(_ index: Int) -> RepositoryVM {
-        let repository = Repositories[index]
-        return RepositoryVM(repository)
-    }
-
 }
 struct RepositoryVM {
     private let repository: RepositoryElement
@@ -105,4 +81,8 @@ extension RepositoryVM {
     }
 }
 
-
+enum ErrorResult: Error {
+    case network(string: String)
+    case parser(string: String)
+    case custom(string: String)
+}
